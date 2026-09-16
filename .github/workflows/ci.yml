@@ -1,0 +1,37 @@
+name: CI
+on:
+  push: { branches: [main] }
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '${{ matrix.python-version }}' }
+      - name: Syntax check (stdlib only, no install step on purpose)
+        run: python -m compileall -q scripts tests
+      - name: Assert no third-party imports in the core
+        run: |
+          ! grep -rnE '^\s*(import|from)\s+(lxml|docx|fitz|PIL|numpy|pandas)' scripts/docxkit.py scripts/tfmt.py \
+            --include='*.py' | grep -v 'import fitz' || true
+          python - <<'PY'
+          import ast, sys
+          allowed = set(sys.stdlib_module_names) | {'docxkit'}
+          bad = []
+          for f in ('scripts/docxkit.py', 'scripts/tfmt.py'):
+              for n in ast.walk(ast.parse(open(f, encoding='utf-8').read())):
+                  mods = []
+                  if isinstance(n, ast.Import): mods = [a.name.split('.')[0] for a in n.names]
+                  elif isinstance(n, ast.ImportFrom) and n.module: mods = [n.module.split('.')[0]]
+                  for m in mods:
+                      if m not in allowed and m != 'fitz':   # fitz 只在可选的 pdfcheck 里
+                          bad.append((f, n.lineno, m))
+          print('non-stdlib imports:', bad)
+          sys.exit(1 if bad else 0)
+          PY
+      - name: Regression (synthetic drafts end to end)
+        run: bash tests/run_regression.sh

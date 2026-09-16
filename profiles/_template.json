@@ -1,0 +1,1015 @@
+{
+ "name": "_template",
+ "title": "（学校名）（学位类型）论文规范 —— 复制本文件改名后填写",
+ "source": "（把学校规范原件放到 profiles/<name>/ 下，便于追溯）",
+ "page": {
+  "w": 11906,
+  "h": 16838,
+  "margin": {
+   "top": 1440,
+   "right": 1417,
+   "bottom": 1440,
+   "left": 1984
+  },
+  "header": 851,
+  "footer": 992,
+  "line_pitch": 360,
+  "text_width": 8505
+ },
+ "body": {
+  "font_cn": "宋体",
+  "font_en": "Times New Roman",
+  "size": 24,
+  "line": 360,
+  "first_line_chars": 200,
+  "justify": true
+ },
+ "headings": [
+  {
+   "level": 1,
+   "font_cn": "宋体",
+   "size": 32,
+   "bold": true,
+   "align": "center",
+   "space_before": 360,
+   "space_after": 360,
+   "page_break_before": true
+  },
+  {
+   "level": 2,
+   "font_cn": "宋体",
+   "size": 30,
+   "bold": true,
+   "align": "left",
+   "space_before": 240,
+   "space_after": 120
+  },
+  {
+   "level": 3,
+   "font_cn": "宋体",
+   "size": 28,
+   "bold": true,
+   "align": "left",
+   "space_before": 240,
+   "space_after": 120
+  }
+ ],
+ "header": {
+  "text": "{{TITLE_CN}}",
+  "font": "宋体",
+  "size": 18
+ },
+ "footer": {
+  "font": "宋体",
+  "size": 21,
+  "arabic_prefix": "- ",
+  "arabic_suffix": " -"
+ },
+ "outline": {
+  "max_heading_len": 40,
+  "scheme_levels": {
+   "chapter_cn": 1,
+   "chapter_en": 1,
+   "dotted1": 1,
+   "dotted2": 2,
+   "dotted3": 3,
+   "cn_dun": 2,
+   "paren_cn": 3
+  },
+  "negative_patterns": [
+   "^【.{1,8}】",
+   "^案例\\s*\\d+\\s*[：:]",
+   "^表\\s*\\d",
+   "^图\\s*\\d"
+  ],
+  "front_matter_titles": [
+   "ack_zh",
+   "ack_en",
+   "abstract_zh",
+   "abstract_en",
+   "toc"
+  ],
+  "back_matter_titles": [
+   "references",
+   "appendix",
+   "notes"
+  ],
+  "page_break_roles": [
+   "ack_en",
+   "abstract_zh",
+   "abstract_en"
+  ],
+  "toc_front_roles": [
+   "ack_zh",
+   "ack_en",
+   "abstract_zh",
+   "abstract_en"
+  ],
+  "special_titles": {
+   "ack_zh": {
+    "pattern": "致\\s*谢",
+    "level": 1,
+    "role_class": "front",
+    "font_cn": "宋体",
+    "size": 28,
+    "bold": true,
+    "align": "center",
+    "toc": true
+   },
+   "ack_en": {
+    "pattern": "Acknowledge?ments?",
+    "level": 1,
+    "role_class": "front",
+    "font_cn": "Times New Roman",
+    "size": 28,
+    "bold": true,
+    "align": "center",
+    "toc": true
+   },
+   "abstract_zh": {
+    "pattern": "摘\\s*要",
+    "level": 1,
+    "role_class": "front",
+    "font_cn": "黑体",
+    "size": 28,
+    "bold": false,
+    "align": "center",
+    "toc": true
+   },
+   "abstract_en": {
+    "pattern": "Abstract",
+    "level": 1,
+    "role_class": "front",
+    "font_cn": "Times New Roman",
+    "size": 28,
+    "bold": true,
+    "align": "center",
+    "toc": true
+   },
+   "toc": {
+    "pattern": "目\\s*录",
+    "level": 1,
+    "role_class": "front",
+    "font_cn": "宋体",
+    "size": 28,
+    "bold": true,
+    "align": "center",
+    "toc": false
+   },
+   "references": {
+    "pattern": "参考文献|References",
+    "level": 1,
+    "role_class": "back",
+    "size": 28
+   },
+   "appendix": {
+    "pattern": "附录\\s*\\d*.{0,20}",
+    "level": 1,
+    "role_class": "back",
+    "size": 28
+   },
+   "notes": {
+    "pattern": "注\\s*释",
+    "level": 1,
+    "role_class": "back",
+    "size": 28
+   }
+  },
+  "front_matter_markers": [
+   "分类编号",
+   "单位代码",
+   "密\\s*级",
+   "学\\s*号",
+   "学\\s*生\\s*姓\\s*名",
+   "申请学位级别",
+   "申请专业名称",
+   "研\\s*究\\s*方\\s*向",
+   "指导教师姓名",
+   "专业技术职称",
+   "提交论文日期",
+   "论\\s*文\\s*字\\s*数",
+   "A THESIS SUBMITTED",
+   "Under the Supervision",
+   "IN PARTIAL FULFILLMENT",
+   "原创性声明",
+   "使用授权声明",
+   "学位论文作者签名",
+   "导师签名",
+   "保密□",
+   "不保密",
+   "^By$",
+   "天津外国语大学",
+   "Tianjin Foreign Studies"
+  ]
+ },
+ "sections": [
+  {
+   "break_before": "declaration",
+   "header": "hdr_blank",
+   "footer": "ftr_blank",
+   "pgnum": null
+  },
+  {
+   "break_before": "ack_zh",
+   "header": "hdr_blank",
+   "footer": "ftr_roman",
+   "pgnum": {
+    "fmt": "upperRoman",
+    "start": 1
+   }
+  },
+  {
+   "break_before": "toc",
+   "header": "hdr_blank",
+   "footer": "ftr_roman",
+   "pgnum": {
+    "fmt": "upperRoman"
+   }
+  },
+  {
+   "break_before": "FIRST_H1",
+   "header": "hdr_blank",
+   "footer": "ftr_blank",
+   "pgnum": null
+  }
+ ],
+ "tail_section": {
+  "header": "hdr_title",
+  "footer": "ftr_arabic",
+  "pgnum": {
+   "fmt": "decimal",
+   "start": 1
+  }
+ },
+ "hygiene": {
+  "font_families": [
+   "Times New Roman",
+   "宋体",
+   "黑体",
+   "楷体",
+   "SimSun",
+   "SimHei"
+  ]
+ },
+ "checks": {
+  "text_patterns": {
+   "中文语境半角括号": "[一-鿿]\\s*\\([^)]*[一-鿿]",
+   "全角空格填空（WPS 显示为方框）": "　{3,}",
+   "中英文数字混写疑似笔误": "案例[一二三四五六七八九十]\\d"
+  }
+ },
+ "limits": {
+  "abstract_cn": [
+   300,
+   500
+  ],
+  "body_cjk_min": 10000,
+  "title_cn_max": 25,
+  "abstract_en_indent_chars": 250
+ },
+ "metadata_template": {
+  "TITLE_CN": "（中文题目，不超过25个汉字）",
+  "TITLE_EN": "(English title)",
+  "AUTHOR": "",
+  "STUDENT_ID": "",
+  "UNIT_CODE": "10068",
+  "SECRECY": "公开",
+  "DEGREE": "硕　士",
+  "MAJOR": "翻　译",
+  "DIRECTION": "英语笔译",
+  "SUPERVISOR": "",
+  "SUPERVISOR_TITLE": "",
+  "DATE_CN": "",
+  "DATE_EN": "",
+  "SIGN_DATE": "",
+  "UNIVERSITY_CN": "天津外国语大学",
+  "UNIVERSITY_EN": "Tianjin Foreign Studies University",
+  "THESIS_KIND_CN": "翻译硕士专业学位论文",
+  "SUPERVISOR_EN": ""
+ },
+ "front_matter_order": [
+  "cover",
+  "title_page",
+  "declaration"
+ ],
+ "front_matter": {
+  "cover": {
+   "paras": [
+    {
+     "type": "field_line",
+     "sz": 21,
+     "cells": [
+      {
+       "label": "分类编号："
+      },
+      {
+       "tab": 3400,
+       "line": true
+      },
+      {
+       "tab": 5300,
+       "line": false
+      },
+      {
+       "label": "单位代码："
+      },
+      {
+       "tab": 6800,
+       "line": true
+      },
+      {
+       "value": "{{UNIT_CODE}}"
+      },
+      {
+       "tab": 8505,
+       "line": true
+      }
+     ]
+    },
+    {
+     "type": "field_line",
+     "sz": 21,
+     "cells": [
+      {
+       "label": "密    级："
+      },
+      {
+       "tab": 1900,
+       "line": true
+      },
+      {
+       "value": "{{SECRECY}}"
+      },
+      {
+       "tab": 3400,
+       "line": true
+      },
+      {
+       "tab": 5300,
+       "line": false
+      },
+      {
+       "label": "学    号："
+      },
+      {
+       "tab": 7000,
+       "line": true
+      },
+      {
+       "value": "{{STUDENT_ID}}"
+      },
+      {
+       "tab": 8505,
+       "line": true
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 21
+    },
+    {
+     "type": "blank",
+     "sz": 28
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "before": 240,
+     "after": 200,
+     "line": 240,
+     "runs": [
+      {
+       "t": "{{UNIVERSITY_CN}}",
+       "font": "华文行楷",
+       "ea": "华文行楷",
+       "sz": 84
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "before": 0,
+     "after": 200,
+     "line": 240,
+     "runs": [
+      {
+       "t": "{{THESIS_KIND_CN}}",
+       "font": "宋体",
+       "sz": 72
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 28
+    },
+    {
+     "type": "blank",
+     "sz": 28
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "before": 120,
+     "after": 120,
+     "line": 300,
+     "runs": [
+      {
+       "t": "{{TITLE_CN}}",
+       "font": "宋体",
+       "sz": 44
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "before": 60,
+     "after": 120,
+     "line": 300,
+     "runs": [
+      {
+       "t": "{{TITLE_EN}}",
+       "font": "Times New Roman",
+       "ea": "宋体",
+       "sz": 36,
+       "b": true
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 28
+    },
+    {
+     "type": "blank",
+     "sz": 28
+    },
+    {
+     "type": "blank",
+     "sz": 28
+    },
+    {
+     "type": "field_line",
+     "sz": 30,
+     "cells": [
+      {
+       "label": "学 生 姓 名："
+      },
+      {
+       "tab": 3000,
+       "line": true
+      },
+      {
+       "value": "{{AUTHOR}}"
+      },
+      {
+       "tab": 4252,
+       "line": true
+      },
+      {
+       "label": "申请学位级别："
+      },
+      {
+       "tab": 6800,
+       "line": true
+      },
+      {
+       "value": "{{DEGREE}}"
+      },
+      {
+       "tab": 8505,
+       "line": true
+      }
+     ]
+    },
+    {
+     "type": "field_line",
+     "sz": 30,
+     "cells": [
+      {
+       "label": "申请专业名称："
+      },
+      {
+       "tab": 4700,
+       "line": true
+      },
+      {
+       "value": "{{MAJOR}}"
+      },
+      {
+       "tab": 8505,
+       "line": true
+      }
+     ]
+    },
+    {
+     "type": "field_line",
+     "sz": 30,
+     "cells": [
+      {
+       "label": "研 究 方 向："
+      },
+      {
+       "tab": 4400,
+       "line": true
+      },
+      {
+       "value": "{{DIRECTION}}"
+      },
+      {
+       "tab": 8505,
+       "line": true
+      }
+     ]
+    },
+    {
+     "type": "field_line",
+     "sz": 30,
+     "cells": [
+      {
+       "label": "指导教师姓名："
+      },
+      {
+       "tab": 3000,
+       "line": true
+      },
+      {
+       "value": "{{SUPERVISOR}}"
+      },
+      {
+       "tab": 4700,
+       "line": true
+      },
+      {
+       "label": "专业技术职称："
+      },
+      {
+       "tab": 7300,
+       "line": true
+      },
+      {
+       "value": "{{SUPERVISOR_TITLE}}"
+      },
+      {
+       "tab": 8505,
+       "line": true
+      }
+     ]
+    },
+    {
+     "type": "field_line",
+     "sz": 30,
+     "cells": [
+      {
+       "label": "提交论文日期："
+      },
+      {
+       "tab": 4700,
+       "line": true
+      },
+      {
+       "value": "{{DATE_CN}}"
+      },
+      {
+       "tab": 8505,
+       "line": true
+      }
+     ]
+    }
+   ]
+  },
+  "title_page": {
+   "paras": [
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 300,
+     "runs": [
+      {
+       "t": "{{TITLE_EN}}",
+       "font": "Times New Roman",
+       "ea": "宋体",
+       "sz": 36,
+       "b": true
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "{{AUTHOR}}",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "blank",
+     "sz": 28,
+     "line": 240
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "{{UNIVERSITY_EN}}",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "line": 240,
+     "runs": [
+      {
+       "t": "{{DATE_EN}}",
+       "font": "Times New Roman",
+       "sz": 28
+      }
+     ]
+    }
+   ]
+  },
+  "declaration": {
+   "paras": [
+    {
+     "type": "text",
+     "jc": "center",
+     "before": 240,
+     "after": 0,
+     "line": 360,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "黑体",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 24,
+     "line": 360
+    },
+    {
+     "type": "text",
+     "jc": "both",
+     "line": 360,
+     "ind": {
+      "firstLine": 480,
+      "firstLineChars": 200
+     },
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 24,
+     "line": 360
+    },
+    {
+     "type": "text",
+     "jc": "left",
+     "line": 360,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      },
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      },
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 24,
+     "line": 360
+    },
+    {
+     "type": "blank",
+     "sz": 24,
+     "line": 360
+    },
+    {
+     "type": "text",
+     "jc": "center",
+     "before": 240,
+     "after": 0,
+     "line": 360,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "黑体",
+       "sz": 28
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 24,
+     "line": 360
+    },
+    {
+     "type": "text",
+     "jc": "both",
+     "line": 360,
+     "ind": {
+      "firstLine": 480,
+      "firstLineChars": 200
+     },
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 24,
+     "line": 360
+    },
+    {
+     "type": "text",
+     "jc": "left",
+     "line": 360,
+     "ind": {
+      "firstLine": 480,
+      "firstLineChars": 200
+     },
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "jc": "left",
+     "line": 360,
+     "ind": {
+      "firstLine": 480,
+      "firstLineChars": 200
+     },
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "jc": "left",
+     "line": 360,
+     "ind": {
+      "firstLine": 480,
+      "firstLineChars": 200
+     },
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 24,
+     "line": 360
+    },
+    {
+     "type": "text",
+     "jc": "left",
+     "line": 360,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      },
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      },
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      }
+     ]
+    },
+    {
+     "type": "blank",
+     "sz": 24,
+     "line": 360
+    },
+    {
+     "type": "text",
+     "jc": "left",
+     "line": 360,
+     "runs": [
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      },
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      },
+      {
+       "t": "（按本校规范填写）",
+       "font": "宋体",
+       "sz": 24
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "_how_to": [
+  "1. 复制本文件为 profiles/<你的学校>.json，把 name 改掉。",
+  "2. page/body/headings 按规范正文填：字号用半点（小四=24 四号=28 小三=30 三号=32 小二=36 二号=44 五号=21）。",
+  "3. outline.special_titles 里写本校的前置件/后置件名称与格式；role_class=front 的用自己的字体字号，back 的走章标题样式但可覆盖 size。",
+  "4. front_matter 是封面/扉页/声明的逐段版式；field_line 的 cells 顺序必须是 label → tab → value → tab，值要排在制表位之后才会落在下划线上。",
+  "5. sections 按本校的页码方案排；break_before 可以是 front_matter 的块名、special_titles 的角色名，或 FIRST_H1。",
+  "6. checks.text_patterns 只报不改；limits 是硬性指标。",
+  "7. 填完跑：bash tests/run_regression.sh 确认流程不炸。"
+ ]
+}

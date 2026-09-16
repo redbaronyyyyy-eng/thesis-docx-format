@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+tests/samples/
+*.bak
+*.bak[0-9]
+# 工程产物（跑流程时生成，不入库）
+00_input.docx
+01_accepted.docx
+02_outline.tsv
+03_formatted.docx
+project.json
+report_audit.md
+# 学校规范原件：自己放，不随仓库分发
+profiles/*/*.doc
+profiles/*/*.docx
+profiles/*/*.pdf
